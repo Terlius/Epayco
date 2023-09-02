@@ -1,0 +1,35 @@
+.container{
+    display: flex;
+   
+    align-items: center;
+    justify-content: center;
+    
+}
+.titulo{
+    text-align: center;
+}
+
+.perfiles{
+    
+        display: flex;
+        grid-template-columns: repeat(auto-fill, minmax(12em,1fr));
+        gap: 0.5em;
+        margin-top: 2em;
+        justify-items: center;
+       
+    
+
+    .perfil{
+        img{
+           
+            height: 200px;
+        }
+    }
+}
+
+.card{
+
+    img{
+        align-content: center;
+    }
+}

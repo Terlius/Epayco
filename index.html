@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Mini Tienda</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mx-auto titulo">
+          <h1>Rosita Fresita</h1>
+        </div>
+
+        <div class="container-perfiles">
+          <div class="col-12">
+            <h2>Perfiles</h2>
+          </div>
+          <div class="perfiles col-12">
+            <div
+              class="perfil"
+              data-username="Paola Trujillo"
+              data-typedoc="CC"
+              data-numberdoc="12356453"
+              onclick="cambiarDatosUser(this)"
+            >
+              <img src="./images/user1.jpg" />
+              <h3>Paola Trujillo</h3>
+              <p>CC: 12356453</p>
+            </div>
+            <div
+              class="perfil"
+              data-username="Andres Felipe"
+              data-typedoc="CC"
+              data-numberdoc="23356453"
+              onclick="cambiarDatosUser(this)"
+            >
+              <img src="./images/user2.jpg" alt="" />
+              <h3>Andres Felipe</h3>
+              <p>CC: 23356453</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="products col-8">
+          <div class="col-12">
+            <h2>Productos</h2>
+          </div>
+
+          <div class="row">
+
+
+
+
+
+            <div
+              class="product col-6 card shadow"
+              data-name="Paquete de Bananas"
+              data-description="aquete de banas 50 unidades."
+              data-value="10000"
+              data-iva="1900"
+            >
+            <img src="./images/manzana.jpeg" alt="" style="width: 80%;">
+              <div class="card-body">
+                <p>Nombre: <span>Paquete de Bananas</span></p>
+                <p>Descripción: <span>Paquete de banas 50 unidades.</span></p>
+                <p>Valor: $<span>10000</span></p>
+                <p>IVA: $<span>1900</span></p>
+                <button onclick="generateEpaycoButton(this)">
+                  Seleccionar
+                </button>
+              </div>
+            </div>
+
+
+
+
+
+
+
+            <div
+              class="product col-6"
+              data-name="Paquete de Manzanas"
+              data-description="Paquete de manzanas 50 unidades."
+              data-value="15000"
+              data-iva="2850"
+            >
+              <p>Nombre: <span>Paquete de Manzanas</span></p>
+              <p>Descripción: <span>Paquete de manzanas 50 unidades.</span></p>
+              <p>Valor: $<span>15000</span></p>
+              <p>IVA: $<span>2850</span></p>
+              <button onclick="generateEpaycoButton(this)">Seleccionar</button>
+            </div>
+
+            <div
+              class="product col-6"
+              data-name="Paquete de Naranjas"
+              data-description="Paquete de naranjas 50 unidades."
+              data-value="20000"
+              data-iva="3800"
+            >
+              <p>Nombre: <span>Paquete de Naranjas</span></p>
+              <p>Descripción: <span>Paquete de naranjas 50 unidades.</span></p>
+              <p>Valor: $<span>20000</span></p>
+              <p>IVA: $<span>3800</span></p>
+              <button onclick="generateEpaycoButton(this)">Seleccionar</button>
+            </div>
+
+            <div
+              class="product col-6"
+              data-name="Paquete de Limones"
+              data-description="Paquete de limones 50 unidades."
+              data-value="25000"
+              data-iva="4750"
+            >
+              <p>Nombre: <span>Paquete de Limones</span></p>
+              <p>Descripción: <span>Paquete de limones 50 unidades.</span></p>
+              <p>Valor: $<span>25000</span></p>
+              <p>IVA: $<span>4750</span></p>
+              <button onclick="generateEpaycoButton(this)">Seleccionar</button>
+            </div>
+          </div>
+        </div>
+
+        //Final de productos
+
+        <div class="col-4">
+          <h2>Información del Cliente:</h2>
+          <p>Nombre: <span id="userName"></span></p>
+          <p>Tipo de Documento: <span id="userTypeDoc"></span></p>
+          <p>Numero de Documento: <span id="userNumberDoc"></span></p>
+          <br />
+
+          <h2>Detalles del Producto Seleccionado:</h2>
+          <p>Nombre: <span id="selectedProductName"></span></p>
+          <p>Descripción: <span id="selectedProductDescription"></span></p>
+          <p>Valor: $<span id="selectedProductValue"></span></p>
+          <p>IVA: $<span id="selectedProductIVA"></span></p>
+
+          <div id="epaycoCheckoutContainer"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
